@@ -64,7 +64,7 @@ namespace kcdnug.Mobile.Infrastructure {
         /// </summary>
         /// <param name="parameters">The navigation parameters.</param>
         /// <returns><c>True</c> if navigation can continue, <c>False</c> if navigation is not allowed to continue</returns>
-        public virtual bool CanNavigate(NavigationParameters parameters)
+        public virtual bool CanNavigate(INavigationParameters parameters)
         {
             return true;
         }
@@ -181,7 +181,7 @@ namespace kcdnug.Mobile.Infrastructure {
         /// Invoked by Prism after navigating away from viewmodel's page.
         /// </summary>
         /// <param name="parameters">The parameters.</param>
-        public virtual void OnNavigatedFrom(NavigationParameters parameters)
+        public virtual void OnNavigatedFrom(INavigationParameters parameters)
         {
         }
 
@@ -189,7 +189,7 @@ namespace kcdnug.Mobile.Infrastructure {
         /// Invoked by Prism after navigating to the viewmodel's page.
         /// </summary>
         /// <param name="parameters">The parameters.</param>
-        public virtual void OnNavigatedTo(NavigationParameters parameters)
+        public virtual void OnNavigatedTo(INavigationParameters parameters)
         {
         }
 
@@ -197,7 +197,7 @@ namespace kcdnug.Mobile.Infrastructure {
         /// Invoked by Prism before navigating to the viewmodel's page. Deriving classes can use this method to invoke async loading of data instead of waiting for the OnNavigatedTo method to be invoked.
         /// </summary>
         /// <param name="parameters">The parameters.</param>
-        public virtual void OnNavigatingTo(NavigationParameters parameters)
+        public virtual void OnNavigatingTo(INavigationParameters parameters)
         {
         }
 
