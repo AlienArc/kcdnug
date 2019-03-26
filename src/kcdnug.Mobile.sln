@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kcdnug.Mobile", "kcdnug.Mobile\kcdnug.Mobile.csproj", "{6A74815A-010E-45DB-B5CA-AE61FBCF7C99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kcdnug.Mobile", "kcdnug.Mobile\kcdnug.Mobile.csproj", "{6A74815A-010E-45DB-B5CA-AE61FBCF7C99}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kcdnug.Mobile.Android", "kcdnug.Mobile.Android\kcdnug.Mobile.Android.csproj", "{0DE3C403-417E-47F6-A3F9-5A8362412D17}"
 EndProject
@@ -13,21 +13,25 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kcdnug.Mobile.UWP", "kcdnug
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platform", "Platform", "{33AF0297-B59C-45B8-A4F6-7F69364F5FA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kcdnug.Mobile.Repositories", "kcdnug.Mobile.Repositories\kcdnug.Mobile.Repositories.csproj", "{12C3FB8F-0476-4520-9F17-47FF74AB2350}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kcdnug.Mobile.Repositories", "kcdnug.Mobile.Repositories\kcdnug.Mobile.Repositories.csproj", "{12C3FB8F-0476-4520-9F17-47FF74AB2350}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kcdnug.Services", "kcdnug.Services\kcdnug.Services.csproj", "{82658988-9776-4EB0-8E0F-84AD1E8E61FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kcdnug.Services", "kcdnug.Services\kcdnug.Services.csproj", "{82658988-9776-4EB0-8E0F-84AD1E8E61FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kcdnug.Mobile.Tests", "kcdnug.Mobile.Tests\kcdnug.Mobile.Tests.csproj", "{260F379B-59B7-4E47-BCEC-9EEBBF9C8DED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kcdnug.Mobile.Tests", "kcdnug.Mobile.Tests\kcdnug.Mobile.Tests.csproj", "{260F379B-59B7-4E47-BCEC-9EEBBF9C8DED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kcdnug.Mobile.Repositories.Tests", "kcdnug.Mobile.Repositories.Tests\kcdnug.Mobile.Repositories.Tests.csproj", "{2113B019-5F00-41CD-B623-F5736C9E7E1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kcdnug.Mobile.Repositories.Tests", "kcdnug.Mobile.Repositories.Tests\kcdnug.Mobile.Repositories.Tests.csproj", "{2113B019-5F00-41CD-B623-F5736C9E7E1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kcdnug.Services.Tests", "kcdnug.Services.Tests\kcdnug.Services.Tests.csproj", "{070E89FA-7493-484C-9434-50AA8D7AA76E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kcdnug.Services.Tests", "kcdnug.Services.Tests\kcdnug.Services.Tests.csproj", "{070E89FA-7493-484C-9434-50AA8D7AA76E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "__Xamarin Forms", "__Xamarin Forms", "{CF6AC173-808B-4D9F-AD08-A9CFA1D86CCA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Repositories", "_Repositories", "{B94D346B-B1B0-46AB-BF0B-720A06489D45}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Services", "_Services", "{588ED37F-1FDE-4A24-AC23-24EF16B9F4D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure", "Azure", "{C63DFF8F-A745-4E69-90E7-5E0EA2249538}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kcdnug.Azure.Api", "kcdnug.Azure.Api\kcdnug.Azure.Api.csproj", "{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -509,6 +513,54 @@ Global
 		{070E89FA-7493-484C-9434-50AA8D7AA76E}.Release|x64.Build.0 = Release|Any CPU
 		{070E89FA-7493-484C-9434-50AA8D7AA76E}.Release|x86.ActiveCfg = Release|Any CPU
 		{070E89FA-7493-484C-9434-50AA8D7AA76E}.Release|x86.Build.0 = Release|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Ad-Hoc|Any CPU.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Ad-Hoc|Any CPU.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Ad-Hoc|ARM.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Ad-Hoc|ARM.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Ad-Hoc|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Ad-Hoc|x64.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Ad-Hoc|x64.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Ad-Hoc|x86.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Ad-Hoc|x86.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.AppStore|Any CPU.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.AppStore|ARM.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.AppStore|ARM.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.AppStore|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.AppStore|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.AppStore|x64.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.AppStore|x64.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.AppStore|x86.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.AppStore|x86.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Debug|ARM.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Debug|x64.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Debug|x86.Build.0 = Debug|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Release|ARM.ActiveCfg = Release|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Release|ARM.Build.0 = Release|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Release|iPhone.Build.0 = Release|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Release|x64.ActiveCfg = Release|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Release|x64.Build.0 = Release|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Release|x86.ActiveCfg = Release|Any CPU
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -523,6 +575,7 @@ Global
 		{260F379B-59B7-4E47-BCEC-9EEBBF9C8DED} = {CF6AC173-808B-4D9F-AD08-A9CFA1D86CCA}
 		{2113B019-5F00-41CD-B623-F5736C9E7E1E} = {B94D346B-B1B0-46AB-BF0B-720A06489D45}
 		{070E89FA-7493-484C-9434-50AA8D7AA76E} = {588ED37F-1FDE-4A24-AC23-24EF16B9F4D5}
+		{058D1E4D-6BC8-4DE9-AFEC-7C0C8CC12B4B} = {C63DFF8F-A745-4E69-90E7-5E0EA2249538}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A9D8DAE0-F9FD-4827-9A1B-D278B295314F}
