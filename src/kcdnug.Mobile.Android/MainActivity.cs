@@ -6,7 +6,7 @@ using Prism.Ioc;
 
 namespace kcdnug.Mobile.Droid
 {
-    [Activity(Label = "kcdnug.Mobile", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "kcdnug.Mobile", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -23,7 +23,7 @@ namespace kcdnug.Mobile.Droid
 
     public class AndroidInitializer : IPlatformInitializer
     {
-        public void RegisterTypes(IContainerRegistry container)
+        public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // Register any platform specific implementations
         }

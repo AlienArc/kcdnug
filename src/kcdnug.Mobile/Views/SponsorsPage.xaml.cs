@@ -2,9 +2,9 @@
 
 namespace kcdnug.Mobile.Views
 {
-	public partial class ProfilePage : ContentPage
+	public partial class SponsorsPage : ContentPage
 	{
-		public ProfilePage()
+		public SponsorsPage()
 		{
 			InitializeComponent();
 		}

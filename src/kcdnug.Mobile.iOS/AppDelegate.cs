@@ -30,9 +30,9 @@ namespace kcdnug.Mobile.iOS
 
     public class iOSInitializer : IPlatformInitializer
     {
-        public void RegisterTypes(IContainerRegistry container)
+        public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            // Register any platform specific implementations
         }
     }
 }

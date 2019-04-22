@@ -29,9 +29,9 @@ namespace kcdnug.Mobile.UWP
 
     public class UwpInitializer : IPlatformInitializer
     {
-        public void RegisterTypes(IContainerRegistry container)
+        public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            // Register any platform specific implementations
         }
     }
 }

@@ -6,9 +6,9 @@ using System.Linq;
 
 namespace kcdnug.Mobile.ViewModels
 {
-	public class ProfilePageViewModel : BindableBase
+	public class EventsPageViewModel : BindableBase
 	{
-		public ProfilePageViewModel()
+		public EventsPageViewModel()
 		{
 
 		}

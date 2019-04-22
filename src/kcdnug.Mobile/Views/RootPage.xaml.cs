@@ -2,9 +2,9 @@
 
 namespace kcdnug.Mobile.Views
 {
-	public partial class ProfilePage : ContentPage
+	public partial class RootPage : TabbedPage
 	{
-		public ProfilePage()
+		public RootPage()
 		{
 			InitializeComponent();
 		}

@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="kcdnug.Mobile.Views.ProfilePage"
-			 Title="Profile">
+             x:Class="kcdnug.Mobile.Views.SponsorsPage"
+			 Title="Sponsors">
 
-	<Label Text="Profile!" />
+	<Label Text="Sponsors!" />
 	
 </ContentPage>

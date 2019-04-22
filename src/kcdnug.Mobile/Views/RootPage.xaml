@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+			xmlns:views="clr-namespace:kcdnug.Mobile.Views"
+			prism:ViewModelLocator.AutowireViewModel="True"
+            x:Class="kcdnug.Mobile.Views.RootPage"
+			xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarItemColor="#666666"
+            android:TabbedPage.BarSelectedItemColor="Black">
+
+	<TabbedPage.Children>
+		<views:EventsPage />
+		<views:SponsorsPage />
+		<views:ProfilePage />
+	</TabbedPage.Children>
+
+</TabbedPage>
