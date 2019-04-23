@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DCA8B8E0-05A6-49DA-B0FC-C911493E980C}</ProjectGuid>
+    <ProjectGuid>{D8EA4B37-EF08-449C-A04E-9E5FDE6D848A}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AutoMapper">
+      <Version>8.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
@@ -91,7 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\kcdnug.Mobile\kcdnug.Mobile.csproj">
-      <Project>{6a74815a-010e-45db-b5ca-ae61fbcf7c99}</Project>
+      <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
       <Name>kcdnug.Mobile</Name>
     </ProjectReference>
   </ItemGroup>

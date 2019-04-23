@@ -7,39 +7,42 @@ using System.Threading.Tasks;
 
 namespace kcdnug.Services
 {
-	public class ServiceBase : IDisposable
+	public abstract class ServiceBase : IDisposable
 	{
 
-		protected static readonly Uri ApiBaseUri = new Uri("http://api.kcdnug.net/api/");
+		protected static readonly Uri ApiBaseUri = new Uri("https://kcdnugazureapi.azurewebsites.net/api/");
+		private static readonly string apiKey = "VK3fasby35xPhPvwtVB6LEDaIaIalKRV5EuaHat7SOp66QaoWUQbsQ==";
 
 		private IHttpMessageHandlerFactory MessageHandlerFactory { get; }
-		public HttpClient CurrentHttpClient { get; }
+		private HttpClient CurrentHttpClient { get; }
 
 		public ServiceBase(IHttpMessageHandlerFactory messageHandlerFactory)
 		{
 			MessageHandlerFactory = messageHandlerFactory;
 			CurrentHttpClient = new HttpClient(MessageHandlerFactory.GetHttpMessageHandler());
+			CurrentHttpClient.DefaultRequestHeaders.Add("x-functions-key", apiKey);
 		}
 
 		protected async Task<ApiResult<T>> GetApiData<T>(Uri apiUri, string version = "", bool authorized = true)
 		{
 			try
 			{
-
 				if (authorized)
 				{
 					//todo: add profile service to get current token
 					//client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", LocalProfileService.GetAuthToken());
 				}
 
+				var rqst = new HttpRequestMessage(HttpMethod.Get, apiUri);				
+
 				if (!string.IsNullOrEmpty(version))
 				{
 					var APIVersion = new MediaTypeWithQualityHeaderValue("application/json");
 					APIVersion.Parameters.Add(new NameValueHeaderValue("version", version));
-					CurrentHttpClient.DefaultRequestHeaders.Accept.Add(APIVersion);
+					rqst.Headers.Accept.Add(APIVersion);
 				}
-
-				HttpResponseMessage apiResult = await CurrentHttpClient.GetAsync(apiUri);
+				
+				HttpResponseMessage apiResult = await CurrentHttpClient.SendAsync(rqst);
 				if (apiResult.StatusCode == HttpStatusCode.Unauthorized) return await HandleUnauthorized<T>();
 
 				string json = null;
@@ -69,7 +72,7 @@ namespace kcdnug.Services
 				};
 			}
 		}
-		
+
 		private async Task<ApiResult<T>> HandleUnauthorized<T>()
 		{
 			//todo: handle any login needed event messaging

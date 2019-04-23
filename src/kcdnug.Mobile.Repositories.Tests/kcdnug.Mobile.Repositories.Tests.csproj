@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\kcdnug.Mobile.Repositories\kcdnug.Mobile.Repositories.csproj" />
+    <ProjectReference Include="..\kcdnug.Services\kcdnug.Services.csproj" />
   </ItemGroup>
 
 </Project>

@@ -14,7 +14,7 @@ namespace Tests
 		public void GetUpcomingEventsList()
 		{
 			var mockHttpMessageHandler = new MockHttpMessageHandlerFactory();
-			var eventService = new EventService(mockHttpMessageHandler);
+			var eventService = new EventsService(mockHttpMessageHandler);
 			var events = eventService.GetUpcomingEvents().Result;
 			Assert.IsNotEmpty(events.Data);
 		}

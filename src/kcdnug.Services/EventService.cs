@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 namespace kcdnug.Services
 {
 
-	public class EventService : ServiceBase
+	public class EventsService : ServiceBase, IEventsService
 	{
 
 		public static readonly Uri UpcomingEventSummaryUri = new Uri(ServiceBase.ApiBaseUri, "events");
 
-		public EventService(IHttpMessageHandlerFactory messageHandlerFactory) : base(messageHandlerFactory)
+		public EventsService(IHttpMessageHandlerFactory messageHandlerFactory) : base(messageHandlerFactory)
 		{
 		}
 
-		public async Task<ApiResult<IList<EventSummary>>> GetUpcomingEvents()
+		public async Task<ApiResult<IList<EventSummaryDto>>> GetUpcomingEvents()
 		{
-			return await GetApiData<IList<EventSummary>>(UpcomingEventSummaryUri, "", false);
+			return await GetApiData<IList<EventSummaryDto>>(UpcomingEventSummaryUri, "", false);
 		}
 
 	}

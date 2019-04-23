@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace kcdnug.Services.Dtos
+namespace kcdnug.Mobile.Repositories.Models
 {
 	public class EventSummary
 	{

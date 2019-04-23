@@ -24,13 +24,13 @@ namespace Tests
 
 		private void SetupEventsApi()
 		{
-			this.When(HttpMethod.Get, EventService.UpcomingEventSummaryUri.ToString())
+			this.When(HttpMethod.Get, EventsService.UpcomingEventSummaryUri.ToString())
 				.Respond(request =>
 				{
 
-					var mockEvents = new List<EventSummary>()
+					var mockEvents = new List<EventSummaryDto>()
 					{
-						new EventSummary()
+						new EventSummaryDto()
 						{
 							Id = Guid.Empty,
 							Published = new DateTime(2019,1,1),
@@ -41,7 +41,7 @@ namespace Tests
 							ThumbnailUrl = "http://kcdnug.net/",
 							ImageUrls = new List<string>()
 						},
-						new EventSummary()
+						new EventSummaryDto()
 						{
 							Id = new Guid(0,0,0,0,0,0,0,0,0,0,1),
 							Published = new DateTime(2019,2,1),

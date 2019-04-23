@@ -4,6 +4,7 @@ using kcdnug.Mobile.ViewModels;
 using kcdnug.Mobile.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using DryIoc;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace kcdnug.Mobile
@@ -22,12 +23,21 @@ namespace kcdnug.Mobile
 		protected override async void OnInitialized()
 		{
 			InitializeComponent();
-
+			Repositories.AutoMapperInitialize.Initialize();
 			await NavigationService.NavigateAsync("RootPage");
 		}
 
-		protected override void RegisterTypes(IContainerRegistry containerRegistry)
+		protected override Rules CreateContainerRules()
 		{
+			return base.CreateContainerRules().WithTrackingDisposableTransients();
+		}
+
+		protected override void RegisterTypes(IContainerRegistry containerRegistry)
+		{	
+			containerRegistry.Register<Services.IHttpMessageHandlerFactory, Services.HttpClientMessageHandlerFactory>();
+			containerRegistry.Register<Repositories.IEventsRepository, Repositories.EventsRepository>();
+			containerRegistry.Register<Services.IEventsService, Services.EventsService>();
+
 			containerRegistry.RegisterForNavigation<NavigationPage>();
 			containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
 			containerRegistry.RegisterForNavigation<RootPage, RootPageViewModel>();

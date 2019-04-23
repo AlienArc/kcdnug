@@ -6,6 +6,17 @@
              x:Class="kcdnug.Mobile.Views.EventsPage"
 			 Title="Events">
 
-	<Label Text="EVENTS!" />
-	
+	<StackLayout>
+		<Button Command="{Binding LoadEventsCommand}" Text="Load" />
+		<ListView ItemsSource="{Binding Events}">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<Label Text="{Binding Title}" />
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout> 
+
 </ContentPage>
