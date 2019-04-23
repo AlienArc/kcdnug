@@ -9,9 +9,12 @@ namespace kcdnug.Mobile.Repositories
 {
 	public static class AutoMapperInitialize
 	{
+		private static bool Initialized;
 		public static void Initialize()
 		{
+			if (Initialized) return;
 			Mapper.Initialize(cfg => cfg.CreateMap<EventSummaryDto, EventSummary>());
+			Initialized = true;
 		}
 	}
 }

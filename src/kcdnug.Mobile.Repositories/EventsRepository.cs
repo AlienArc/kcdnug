@@ -19,9 +19,11 @@ namespace kcdnug.Mobile.Repositories
 
 		public async Task<RepositoryResult<IList<EventSummary>>> GetUpcomingEvents()
 		{
-			var eventDtos = await EventsService.GetUpcomingEvents();
-			if (eventDtos.StatusCode != System.Net.HttpStatusCode.OK)
+			var serviceResults = await EventsService.GetUpcomingEvents();
+			if (serviceResults.StatusCode != System.Net.HttpStatusCode.OK)
 			{
+				//TODO: Return Offline Cached Data
+
 				return new RepositoryResult<IList<EventSummary>>
 				{
 					Status = RepositoryResultStatus.NoData
@@ -31,8 +33,11 @@ namespace kcdnug.Mobile.Repositories
 			return new RepositoryResult<IList<EventSummary>>
 			{
 				Status = RepositoryResultStatus.Online,
-				Data = AutoMapper.Mapper.Map<IList<EventSummary>>(eventDtos.Data)
+				Data = AutoMapper.Mapper.Map<IList<EventSummary>>(serviceResults.Data)
 			};
+
+			//TODO: Update Offline Cached Data
+
 		}
 	}
 }

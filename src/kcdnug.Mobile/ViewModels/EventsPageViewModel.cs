@@ -26,6 +26,8 @@ namespace kcdnug.Mobile.ViewModels
 
 			var events = await EventsRepository.GetUpcomingEvents();
 
+			//TODO: Check if we recieved data, possibly update UI to alert if it is offline/cached or live
+
 			Events = events.Data.ToList();
 
 		}

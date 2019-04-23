@@ -13,6 +13,9 @@ namespace Tests
 {
 	public class MockApiHttpMessageHandler : MockHttpMessageHandler
 	{
+		public bool ReturnInternalServerError { get; set; }
+		public bool ReturnUnauthorized { get; set; }
+
 		public const string ValidUsername = "user1";
 		public const string ValidPassword = "Password.1";
 
@@ -27,6 +30,9 @@ namespace Tests
 			this.When(HttpMethod.Get, EventsService.UpcomingEventSummaryUri.ToString())
 				.Respond(request =>
 				{
+
+					if (ReturnInternalServerError) return new HttpResponseMessage(HttpStatusCode.InternalServerError);
+					if (ReturnUnauthorized) return new HttpResponseMessage(HttpStatusCode.Unauthorized);
 
 					var mockEvents = new List<EventSummaryDto>()
 					{

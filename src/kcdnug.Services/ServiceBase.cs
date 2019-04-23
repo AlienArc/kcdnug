@@ -23,7 +23,7 @@ namespace kcdnug.Services
 			CurrentHttpClient.DefaultRequestHeaders.Add("x-functions-key", apiKey);
 		}
 
-		protected async Task<ApiResult<T>> GetApiData<T>(Uri apiUri, string version = "", bool authorized = true)
+		protected async Task<ApiResult<T>> GetApiData<T>(Uri apiUri, string version = "1", bool authorized = true)
 		{
 			try
 			{
@@ -33,16 +33,16 @@ namespace kcdnug.Services
 					//client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", LocalProfileService.GetAuthToken());
 				}
 
-				var rqst = new HttpRequestMessage(HttpMethod.Get, apiUri);				
+				var requestMessage = new HttpRequestMessage(HttpMethod.Get, apiUri);				
 
 				if (!string.IsNullOrEmpty(version))
 				{
 					var APIVersion = new MediaTypeWithQualityHeaderValue("application/json");
 					APIVersion.Parameters.Add(new NameValueHeaderValue("version", version));
-					rqst.Headers.Accept.Add(APIVersion);
+					requestMessage.Headers.Accept.Add(APIVersion);
 				}
 				
-				HttpResponseMessage apiResult = await CurrentHttpClient.SendAsync(rqst);
+				HttpResponseMessage apiResult = await CurrentHttpClient.SendAsync(requestMessage);
 				if (apiResult.StatusCode == HttpStatusCode.Unauthorized) return await HandleUnauthorized<T>();
 
 				string json = null;
@@ -68,7 +68,7 @@ namespace kcdnug.Services
 				return new ApiResult<T>
 				{
 					Data = default(T),
-					StatusCode = HttpStatusCode.BadRequest
+					StatusCode = HttpStatusCode.RequestTimeout
 				};
 			}
 		}
